@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout 
+        android:id="@+id/layout_control_button"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:visibility="gone" >
+        <LinearLayout 
+        android:orientation="vertical"
+        android:layout_width="0dp"
+	    android:layout_height="match_parent"
+	    android:layout_weight="3">
+            <ImageView
+	        android:id="@+id/iv_control_button"
+	        android:layout_width="360dp"
+	        android:layout_height="fill_parent"
+	        android:layout_margin="10dp"
+	        android:adjustViewBounds="true"
+	        android:clickable="true" />
+		</LinearLayout>
+		<RelativeLayout
+		    android:layout_width="wrap_content"
+		    android:layout_height="match_parent"
+		    android:layout_weight="1">
+		    <Button
+		        android:id="@+id/btn_f"
+		        style="@style/button"
+		        android:layout_centerHorizontal="true"
+		        android:layout_marginTop="50dp"
+		        android:text="전" />
+		    <Button
+		        android:id="@+id/btn_q"
+		        style="@style/button"
+		        android:layout_centerHorizontal="true"
+		        android:layout_below="@+id/btn_f"
+		        android:text=""
+		        android:visibility="invisible" />
+		    <Button
+		        android:id="@+id/btn_l"
+		        style="@style/button"
+		        android:layout_below="@+id/btn_f"
+		        android:layout_toLeftOf="@+id/btn_q"
+		        android:text="좌" />
+		    <Button
+		        android:id="@+id/btn_r"
+		        style="@style/button"
+		        android:layout_below="@+id/btn_f"
+		        android:layout_toRightOf="@+id/btn_q"
+		        android:text="우" />
+		    <Button
+		        android:id="@+id/btn_b"
+		        style="@style/button"
+		        android:layout_below="@+id/btn_q"
+		        android:layout_centerHorizontal="true"
+		        android:text="후" />
+		</RelativeLayout>
+    </LinearLayout>
+		<LinearLayout
+		    android:id="@+id/cover"
+		    android:orientation="vertical"
+		    android:layout_width="fill_parent"
+		    android:layout_height="match_parent"
+		    android:layout_weight="1"
+		    android:paddingLeft="10dp"
+		    android:paddingRight="10dp" >
+		    <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textAppearance="@android:style/TextAppearance.Large"
+		        android:text="항체 IP"/>
+			<View
+			    android:layout_width="match_parent"
+		        android:layout_height="1dp"
+		        android:background="@android:color/darker_gray"/>
+			<ListView
+			    android:id="@+id/listview"
+			    android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:choiceMode="singleChoice" />
+			<EditText
+			    android:id="@+id/et_ip"
+			    android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:visibility="invisible"/>
+			<Button
+			    android:id="@+id/btn_c"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:text="연결" />
+	</LinearLayout>	
+	
+</RelativeLayout>
